@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Feature from '../components/Feature';
 import AboutUs from '../components/AboutUs';
 import Popular from '../components/Popular';
+import ProductCard from '../components/ProductCard';
 
 
 
@@ -13,6 +14,7 @@ const Home = () => {
         <Feature />
         <AboutUs />
         <Popular />
+        <ProductCard />
     </div>
   )
 }
