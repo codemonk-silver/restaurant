@@ -9,6 +9,7 @@ import Location from '../components/Location';
 import Testimonial from '../components/Testimonial';
 import Track from '../components/Track';
 import HomeBlog from '../components/HomeBlog';
+import Device from '../components/Device';
 
 
 
@@ -25,6 +26,8 @@ const Home = () => {
         <Testimonial />
         <Track />
         <HomeBlog />
+        <Device />
+        <Faq />
     </div>
   )
 }
