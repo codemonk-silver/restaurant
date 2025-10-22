@@ -10,6 +10,7 @@ import Testimonial from '../components/Testimonial';
 import Track from '../components/Track';
 import HomeBlog from '../components/HomeBlog';
 import Device from '../components/Device';
+import Faq from '../components/Faq';
 
 
 
