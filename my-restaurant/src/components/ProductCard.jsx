@@ -5,7 +5,11 @@ const ProductCard = ({ product }) => {
   const stars = Array(5).fill(0);
 
   return (
-    <div className="relative rounded-lg p-4 flex flex-col h-80" style={{ background: 'linear-gradient(to bottom, white 0%, white 30%, rgba(249, 249, 249, 1) 30%, rgba(249, 249, 249, 1) 100%)' }}>
+    <div className="relative rounded-lg p-4 flex flex-col w-[270px] sm:w-[280px] md:w-[260px] lg:w-[280px] min-h-[360px] mx-auto"
+      style={{
+        background: 'linear-gradient(to bottom, white 0%, white 25%, rgba(249, 249, 249, 1) 30%, rgba(249, 249, 249, 1) 100%)'
+      }}>
+
       {/* Product Image */}
       <img
         src={product.image}
@@ -35,7 +39,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       {/* Buttons */}
-      <div className="absolute bottom-5 left-[30px] w-full flex gap-12">
+      <div className="absolute bottom-5 left-[30px] w-full flex gap-8">
         <button className="px-8 py-2 bg-green-950 text-white rounded-full hover:bg-green-700 transition font-medium">
           Order Now
         </button>

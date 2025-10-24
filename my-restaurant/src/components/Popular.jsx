@@ -19,16 +19,17 @@ const Popular = () => {
       </div>
 
       {/* ✅ Pagination Dots (positioned top-right outside Swiper) */}
-      <div className="absolute right-6 top-[8.5rem] sm:right-10 lg:right-35 z-10">
+      <div className="absolute right-16 top-38 lg:top-[8.5rem] sm:right-10 lg:right-35 z-10">
         <div className="swiper-pagination !static flex justify-end" />
       </div>
 
-      {/* ✅ Swiper Section */}
+      {/* ✅ Swiper Section - Centered on mobile */}
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={25}
         slidesPerView={1}
         loop={true}
+        centeredSlides={true} // Add this line to center slides
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
@@ -38,9 +39,31 @@ const Popular = () => {
           nextEl: ".next-btn",
         }}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
+          480: { 
+            slidesPerView: 1,
+            spaceBetween: 15,
+            centeredSlides: true // Disable centering on larger screens
+          },
+          640: { 
+            slidesPerView: 2,
+            spaceBetween: 20,
+            centeredSlides: false
+          },
+          768: { 
+            slidesPerView: 3,
+            spaceBetween: 25,
+            centeredSlides: false
+          },
+          1024: { 
+            slidesPerView: 4,
+            spaceBetween: 25,
+            centeredSlides: false
+          },
+          1280: { 
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: false
+          }
         }}
         className="pb-10"
       >
@@ -52,7 +75,7 @@ const Popular = () => {
       </Swiper>
 
       {/* ✅ Navigation Buttons BELOW Swiper */}
-      <div className="flex justify-end mt-16 gap-4">
+      <div className="flex justify-center lg:justify-end mt-10 gap-4">
         <button
           className="prev-btn bg-white shadow-md border border-gray-300 rounded-full p-3 hover:bg-[#007A59] hover:text-white transition"
           aria-label="Previous"

@@ -42,7 +42,7 @@ const Chef = () => {
       </div>
 
       {/* Chef Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 space-y-20 lg:space-y-0 gap-10">
         {Chafe.map((chef) => (
           <div
             key={chef.id}

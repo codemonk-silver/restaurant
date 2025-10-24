@@ -6,14 +6,13 @@ import Contact from './pages/Contact';
 import Menu from './pages/Menu';
 import CartItems from './pages/CartItems';
 import Blog from './pages/Blog';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 
 const App = () => {
   return (
     <div>
-          <Navbar />
+          
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

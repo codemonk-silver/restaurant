@@ -1,8 +1,13 @@
 import React from 'react'
+import MenuNav from '../components/MenuNav'
+import MenuItemList from '../components/MenuItemList'
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <div>
+      <MenuNav />
+      <MenuItemList />
+    </div>
   )
 }
 

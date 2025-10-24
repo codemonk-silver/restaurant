@@ -12,11 +12,14 @@ import HomeBlog from '../components/HomeBlog';
 import Device from '../components/Device';
 import Faq from '../components/Faq';
 
+import Navbar from '../components/Navbar';
+
 
 
 const Home = () => {
   return (
     <div>
+        <Navbar />
         <Hero />
         <Feature />
         <AboutUs />

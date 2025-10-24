@@ -2,35 +2,27 @@ import React, { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/Products"; 
 import abouticon from "../assets/abouticon.png";
-import { ChevronDown } from "lucide-react"; // ✅ Arrow icon only
+import { ChevronDown } from "lucide-react";
 
-const ItemList = () => {
-  const categories = [
-    "Breakfast",
-    "Lunch",
-    "Dinner",
-    "Pizza",
-    "Burger",
-    "Drinks",
-    "Dessert",
-  ];
-
-  const [activeCategory, setActiveCategory] = useState("Breakfast");
-  const [dropdownOpen, setDropdownOpen] = useState(false); // ✅ controls dropdown
-
-  const filteredProducts = products
-    .filter((item) => item.category === activeCategory)
-    .slice(0, 8);
-
+const MenuItemList = () => {
+    const categories = [
+        "Breakfast",
+        "Lunch",
+        "Dinner",
+        "Pizza",
+        "Burger",
+        "Drinks",
+        "Dessert",
+      ];
+    
+      const [activeCategory, setActiveCategory] = useState("Breakfast");
+      const [dropdownOpen, setDropdownOpen] = useState(false); // ✅ controls dropdown
+    
+      const filteredProducts = products
+        .filter((item) => item.category === activeCategory)
+        .slice(0, 12);
   return (
-    <div className="px-6 sm:px-10 lg:px-35 pt-20 pb-16">
-      {/* Section Header */}
-      <div className="w-full mb-4 lg:mb-11">
-        <p className="text-[#007A59] font-bold text-center text-2xl">
-          All Items
-        </p>
-        <img className="mx-auto w-1/12" src={abouticon} alt="Section Icon" />
-      </div>
+    <div className="px-6 sm:px-10 lg:px-35 pt-5 pb-16">
 
       <hr className="w-full border-0 lg:border-8 text-[#FF4033] rounded-full" />
 
@@ -103,7 +95,7 @@ const ItemList = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ItemList;
+export default MenuItemList

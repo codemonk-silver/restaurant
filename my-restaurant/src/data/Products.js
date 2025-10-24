@@ -75,28 +75,32 @@ export const products = [
         name: 'Croissant',
         price: 25,
         image: ceaser_salad,
-        rating: '4'
+        rating: '4',
+        category: "Breakfast",
     },
     {
         id: 10,
         name: 'Muffin',
         price: 10,
         image: blueberry,
-        rating: '5'
+        rating: '5',
+        category: "Breakfast",
     },
     {
         id: 11,
         name: 'Waffles',
         price: 20,
         image: cobb,
-        rating: '5'
+        rating: '5',
+        category: "Breakfast",
     },
     {
         id: 12,
         name: 'Bacon',
         price: 15,
         image: virigin,
-        rating: '5'
+        rating: '5',
+        category: "Breakfast",
     },
 
     {
