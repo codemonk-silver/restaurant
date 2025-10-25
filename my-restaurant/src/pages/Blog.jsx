@@ -1,8 +1,13 @@
 import React from 'react'
+import BlogNav from '../components/BlogNav'
+import BlogHero from '../components/BlogHero'
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div>
+      <BlogNav />
+      <BlogHero />
+    </div>
   )
 }
 

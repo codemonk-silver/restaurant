@@ -7,6 +7,7 @@ import Menu from './pages/Menu';
 import CartItems from './pages/CartItems';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
+import ItemDetails from './pages/ItemDetails';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/cartItems" element={<CartItems />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path='/itemdetails' element={<ItemDetails />} />
           </Routes>
           <Footer />
 
