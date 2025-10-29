@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/Products"; 
 import abouticon from "../assets/abouticon.png";
@@ -86,11 +87,14 @@ const ItemList = () => {
 
       {/* Products Grid */}
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProducts.map((item) => (
-            <ProductCard key={item.id} product={item} />
+            <Link key={item.id} to={`/product/${item.id}`}>
+              <ProductCard product={item} />
+            </Link>
           ))}
         </div>
+
       ) : (
         <p className="text-center text-gray-500 mt-10">
           No products found for {activeCategory}.
